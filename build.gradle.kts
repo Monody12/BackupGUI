@@ -19,3 +19,16 @@ tasks.test {
 kotlin {
     jvmToolchain(17)
 }
+
+tasks.jar {
+    // enabled = true
+    manifest {
+        attributes(mapOf("Main-Class" to "org.example.BackupApp"))
+    }
+    from(configurations.runtimeClasspath.get().map {
+        if (it.isDirectory) it else zipTree(it)
+    })
+    val sourcesMain = sourceSets.main.get()
+    sourcesMain.allSource.forEach { println("add from sources: ${it.name}") }
+    from(sourcesMain.output)
+}
