@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
 }
 
 tasks.test {

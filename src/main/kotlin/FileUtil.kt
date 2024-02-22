@@ -5,7 +5,9 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.nio.file.Files
+import java.nio.file.Path
 import java.nio.file.Paths
+import java.util.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 
@@ -81,6 +83,61 @@ object FileUtil {
         }
     }
 
+    /**
+     * 获取当前Jar文件的路径
+     */
+    fun getJarPath(): String {
+        // 获取当前类的保护域
+        val protectionDomain = BackupApp::class.java.protectionDomain
+        // 获取代码源位置
+        val codeSource = protectionDomain.codeSource
+        // 获取Jar文件的完整路径
+        val jarFileUrl = codeSource.location
+        // 转换为路径字符串
+        return jarFileUrl.toURI().path
+    }
 
+    /**
+     * 获取配置文件路径
+     */
+    private fun getConfigPath(): Path {
+        // 获取jar包路径，如果是调试运行，则是源码的父路径
+        val jarPath = getJarPath()
+        val path = if (isDirectory(jarPath)) {
+            Paths.get(jarPath).toString()
+        } else {
+            Paths.get(jarPath).parent.toString()
+        }
+        return Paths.get(path, "backup.properties")
+    }
 
+    /**
+     * 读取配置文件
+     * 如果不存在则创建
+     */
+    fun getConfigFile(): Properties {
+        val path = getConfigPath()
+        if (!Files.exists(path)) {
+            Files.createFile(path)
+        }
+        return Properties().apply {
+            FileInputStream(path.toFile()).use { fis ->
+                load(fis)
+            }
+        }
+    }
+
+    /**
+     * 从配置文件中更新属性
+     */
+    fun updateConfigFile(properties: Properties) {
+        val path = getConfigPath()
+        FileOutputStream(path.toFile()).use { fos ->
+            properties.store(fos, "Backup settings")
+        }
+    }
+
+    /**
+     * huoqu
+     */
 }

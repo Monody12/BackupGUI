@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f024225-9dd9-4a06-b0c9-ac7edc7f73a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/BackupApp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/FileUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/TimerUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="4f024225-9dd9-4a06-b0c9-ac7edc7f73a5" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NetworkUtil.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/BackupApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/BackupApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FileUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FileUtil.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -77,7 +76,7 @@
   "keyToString": {
     "Gradle.BackupGUI [jar].executor": "Run",
     "Gradle.Build BackupGUI.executor": "Run",
-    "Kotlin.BackupApp.executor": "Debug",
+    "Kotlin.BackupApp.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -90,7 +89,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.BackupGUI [jar]">
+  <component name="RunManager" selected="Kotlin.BackupApp">
     <configuration name="BackupGUI [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -122,8 +121,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BackupGUI [jar]" />
         <item itemvalue="Kotlin.BackupApp" />
+        <item itemvalue="Gradle.BackupGUI [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -143,11 +142,25 @@
       <option name="presentableId" value="Default" />
       <updated>1708353606849</updated>
       <workItem from="1708353607886" duration="1349000" />
-      <workItem from="1708514553912" duration="6380000" />
+      <workItem from="1708514553912" duration="6589000" />
+      <workItem from="1708596817076" duration="9601000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1708523966162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708523966162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>
